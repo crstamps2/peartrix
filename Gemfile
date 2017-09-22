@@ -42,6 +42,7 @@ group :development, :test do
   gem 'pry'
   gem 'pry-rails'
   gem 'rspec-rails', '~> 3.5'
+  gem 'factory_girl_rails'
 end
 
 gem 'rest-client'
@@ -56,6 +57,10 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   # Make rails console output pretty
   gem 'hirb'
+end
+
+group :test do
+  gem 'database_cleaner'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -5,6 +5,10 @@ class MembersController < ApplicationController
     redirect_to :back
   end
 
+  def destroy
+    TeamMember.find(params.require(:id)).destroy
+  end
+
   def show
   end
 

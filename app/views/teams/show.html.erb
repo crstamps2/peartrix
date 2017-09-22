@@ -22,6 +22,7 @@ Members:
     <% @team.team_members.each do |person| %>
       <li><%= person.name %><%= select_tag("[overrides]#{person.id}",  options_from_collection_for_select(overrides_for(person), :option_value, :display_text)) %></li>
     <% end %>
+    | <%= link_to "delete", team_member, method: :delete, data: { confirm: "Are you sure?" } %>
   </ul>
   <%= submit_tag('Make Pairs') %>
 <% end %>
